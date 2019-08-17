@@ -25,8 +25,9 @@ void MX1508::setDutyCycle(int duty_cycle){
     ledcWrite(ledChannel, duty_cycle);
   }else{
     duty_cycle = duty_cycle < min_pwm ? min_pwm : duty_cycle;
+    duty_cycle += max_pwm; //  offset to positive integers
     digitalWrite(pinB, HIGH);
-    ledcWrite(ledChannel, max_pwm - duty_cycle);
+    ledcWrite(ledChannel, duty_cycle);
   }
 }
 

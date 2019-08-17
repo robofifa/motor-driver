@@ -2,11 +2,11 @@
 
 // the numbers of the motor pins
 const int M1A = 16;  // 16 corresponds to GPIO16
-const int M1B = 17;  // 16 corresponds to GPIO16
+const int M1B = 17;  // 17 corresponds to GPIO17
 
 // setting PWM properties
-const int freq = 100; // range at least 100-5000 Hz
-const int ledChannel = 0; // 16 channels: 0-15, but every even channels shares its freq with the one before, thus 1&2, 3&4...
+const int freq = 5000; // range at least 100-5000 Hz
+const int ledChannel = 0; // 16 channels: 0-15, but every even channels shares its freq with the one before, thus 0&1, 2&3...
 const int resolution = 8; // 1-16 bits
 const int max_power = 100;
 const int min_power = -100;

@@ -11,11 +11,11 @@ class MX1508 {
     int getMaxPwm();
     int getMinPwm();
   private:
-    const uint8_t pinA;
-    const uint8_t pinB;
-    const uint8_t freq;
-    const uint8_t ledChannel;
-    const uint8_t resolution;
+    const uint8_t pinA; // GPIO pin with output
+    const uint8_t pinB; // GPIO pin with output
+    const uint8_t freq;  // range at least 100-5000 Hz
+    const uint8_t ledChannel; // 16 channels: 0-15, but every even channels shares its freq with the one before, thus 0&1, 2&3...
+    const uint8_t resolution; // 1-16 bits
     int max_pwm;
     int min_pwm;
 };
